@@ -1,7 +1,5 @@
-emailjs.init("service_r22rsoc"); // Replace with your actual EmailJS user ID
-
 document.querySelector("form").addEventListener("submit", function (event) {
-  event.preventDefault();
+  event.preventDefault(); // Prevent the default form submission
 
   // Get the form values
   const name = document.getElementById("name").value;
@@ -11,18 +9,17 @@ document.querySelector("form").addEventListener("submit", function (event) {
   // Send the email using EmailJS
   emailjs
     .send("service_r22rsoc", "template_ufya4pm", {
-      from_name: name,
-      from_email: email,
-      message: message,
-      to_name: "Ejaz Ali", // Optional if used in the template
+      from_name: name, // Dynamic name from the form
+      from_email: email, // Dynamic email from the form
+      message: message, // Dynamic message from the form
     })
     .then(
       function (response) {
-        alert("Message sent successfully!");
+        alert("Message sent successfully!"); // Alert on success
       },
       function (error) {
-        console.error("Failed to send message:", error); // Logs detailed error to console
-        alert("Failed to send message. Please try again.");
+        console.error("Failed to send message:", error); // Log error to console
+        alert("Failed to send message. Please try again."); // Alert on failure
       }
     );
 });
