@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+      /* Custom Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 1.5s ease-out;
+      }
+
+      .slide-up {
+        animation: slideUp 1s ease-out;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white leading-normal tracking-normal">
+    <!-- Hero Section -->
+    <section
+      class="h-screen bg-cover bg-center flex items-center justify-center relative"
+      style="background-image: url('your-image-url.jpg')"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-gray-900 opacity-75"
+      ></div>
+      <div class="text-center fade-in relative z-10">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4">
+          Hello, I'm Ejaz Ali
+        </h1>
+        <p class="text-xl md:text-3xl mb-8 font-light">
+          A Passionate Web Developer
+        </p>
+        <a
+          href="#about"
+          class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105"
+          >Explore More</a
+        >
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 slide-up bg-gray-900">
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-blue-500">
+          About Me
+        </h2>
+        <div class="max-w-4xl mx-auto">
+          <div class="flex flex-col md:flex-row items-center">
+            <!-- Profile Image -->
+            <img
+              src="logo.png"
+              alt="Profile Picture"
+              class="w-48 h-48 rounded-full mb-6 md:mb-0 md:mr-8 shadow-lg"
+            />
+
+            <!-- About Text -->
+            <div>
+              <p class="text-lg md:text-xl mb-4 leading-relaxed text-gray-300">
+                I'm <span class="font-semibold text-white">Ejaz Ali</span>, a
+                skilled web developer with extensive experience in modern web
+                technologies. I specialize in building robust and scalable web
+                applications using
+                <span class="text-blue-400 font-semibold">Django</span>,
+                <span class="text-blue-400 font-semibold">HTML</span>,
+                <span class="text-blue-400 font-semibold">CSS</span>,
+                <span class="text-blue-400 font-semibold">JavaScript</span>, and
+                <span class="text-blue-400 font-semibold">React.js</span>.
+              </p>
+              <p class="text-lg md:text-xl leading-relaxed text-gray-300">
+                My passion lies in creating clean, responsive, and user-friendly
+                interfaces that deliver a seamless experience across all
+                devices. With a strong foundation in both frontend and backend
+                technologies, I bring a comprehensive approach to web
+                development, ensuring that every project I work on is optimized
+                for performance and scalability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Skills Section -->
+          <div class="mt-12">
+            <h3 class="text-3xl md:text-4xl font-bold mb-6 text-blue-500">
+              Skills
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h4 class="text-2xl font-semibold mb-4 text-white">Django</h4>
+                <p class="text-gray-400">
+                  Proficient in building dynamic web applications with Django,
+                  leveraging its powerful features for rapid development and
+                  deployment.
+                </p>
+              </div>
+              <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h4 class="text-2xl font-semibold mb-4 text-white">
+                  HTML & CSS
+                </h4>
+                <p class="text-gray-400">
+                  Expert in crafting clean, semantic HTML and CSS code. Skilled
+                  in creating responsive layouts using modern CSS techniques
+                  like Flexbox and Grid.
+                </p>
+              </div>
+              <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h4 class="text-2xl font-semibold mb-4 text-white">
+                  JavaScript & React.js
+                </h4>
+                <p class="text-gray-400">
+                  Experienced in writing efficient, modular JavaScript code.
+                  Skilled in building interactive, component-based UIs using
+                  React.js.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Timeline -->
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-900 slide-up">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-4xl md:text-5xl font-bold text-center mb-12 text-blue-500"
+        >
+          My Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+          >
+            <img
+              src="https://source.unsplash.com/random/800x600/?website"
+              alt="Portfolio Website"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-white">
+                Portfolio Website
+              </h3>
+              <p class="text-gray-400 mb-4">
+                A personal portfolio website built to showcase my work and
+                skills. The site features responsive design, interactive
+                elements, and a clean, modern UI.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >HTML</span
+                >
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >CSS</span
+                >
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >JavaScript</span
+                >
+              </div>
+              <a href="#" class="text-blue-400 font-semibold hover:underline"
+                >View Project</a
+              >
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+          >
+            <img
+              src="https://source.unsplash.com/random/800x600/?ecommerce"
+              alt="E-commerce Platform"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-white">
+                E-commerce Platform
+              </h3>
+              <p class="text-gray-400 mb-4">
+                Developed a scalable e-commerce platform with user
+                authentication, product management, and payment gateway
+                integration, ensuring a seamless shopping experience.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >React.js</span
+                >
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >Django</span
+                >
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >Stripe API</span
+                >
+              </div>
+              <a href="#" class="text-blue-400 font-semibold hover:underline"
+                >View Project</a
+              >
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+          >
+            <img
+              src="https://source.unsplash.com/random/800x600/?blog"
+              alt="Blog Platform"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-white">Blog Platform</h3>
+              <p class="text-gray-400 mb-4">
+                A dynamic blog platform with CRUD functionalities, allowing
+                users to create, read, update, and delete posts. Features user
+                authentication and comment sections.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >Django</span
+                >
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >HTML</span
+                >
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >CSS</span
+                >
+              </div>
+              <a href="#" class="text-blue-400 font-semibold hover:underline"
+                >View Project</a
+              >
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+          >
+            <img
+              src="https://source.unsplash.com/random/800x600/?weather"
+              alt="Weather App"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-white">Weather App</h3>
+              <p class="text-gray-400 mb-4">
+                A real-time weather application that fetches data from an API
+                and displays it in an easy-to-read interface, providing
+                forecasts and current weather conditions.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >JavaScript</span
+                >
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >HTML</span
+                >
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >CSS</span
+                >
+              </div>
+              <a href="#" class="text-blue-400 font-semibold hover:underline"
+                >View Project</a
+              >
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+          >
+            <img
+              src="https://source.unsplash.com/random/800x600/?task"
+              alt="Task Manager"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-white">Task Manager</h3>
+              <p class="text-gray-400 mb-4">
+                A task management app that allows users to create, edit, and
+                track tasks. Features include drag-and-drop task ordering and
+                real-time updates using Firebase.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >Vue.js</span
+                >
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >Firebase</span
+                >
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >CSS</span
+                >
+              </div>
+              <a href="#" class="text-blue-400 font-semibold hover:underline"
+                >View Project</a
+              >
+            </div>
+          </div>
+          <!-- Project 6 -->
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+          >
+            <img
+              src="https://source.unsplash.com/random/800x600/?landingpage"
+              alt="Landing Page"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-white">Landing Page</h3>
+              <p class="text-gray-400 mb-4">
+                Designed and developed a modern landing page for a tech startup.
+                The page is optimized for conversion, featuring responsive
+                design and SEO best practices.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >HTML</span
+                >
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >CSS</span
+                >
+                <span
+                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >JavaScript</span
+                >
+              </div>
+              <a href="#" class="text-blue-400 font-semibold hover:underline"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 slide-up">
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-blue-500">
+          Get in Touch
+        </h2>
+        <form class="w-full max-w-lg mx-auto" action="/">
+          <div class="mb-4">
+            <label class="block text-gray-300 text-sm font-bold mb-2" for="name"
+              >Name</label
+            >
+            <input
+              class="appearance-none border rounded w-full py-3 px-4 text-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              id="name"
+              type="text"
+              placeholder="Your Name"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-300 text-sm font-bold mb-2"
+              for="email"
+              >Email</label
+            >
+            <input
+              class="appearance-none border rounded w-full py-3 px-4 text-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              id="email"
+              type="email"
+              placeholder="Your Email"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-300 text-sm font-bold mb-2"
+              for="message"
+              >Message</label
+            >
+            <textarea
+              class="appearance-none border rounded w-full py-3 px-4 text-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              id="message"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+          <div>
+            <button
+              class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105"
+              type="submit"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-800 text-center text-gray-400">
+      <p>&copy; 2024 Ejaz Ali. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
