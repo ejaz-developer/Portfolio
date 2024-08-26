@@ -9,7 +9,8 @@ contactForm.addEventListener("submit", (e) => {
   const message = document.querySelector("#message").value;
 
   // Send the email using EmailJS with dynamic data
-  emailjs.send("service_r22rsoc", "template_ufya4pm", {
+  emailjs
+    .send("mjUVFZeHSmJl98Slm", "template_ufya4pm", {
       from_name: name, // Use the name from the form
       from_email: email, // Use the email from the form
       message: message, // Use the message from the form
