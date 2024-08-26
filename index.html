@@ -114,7 +114,6 @@
                 skilled web developer with extensive experience in modern web
                 technologies. I specialize in building robust and scalable web
                 applications using
-                <span class="text-blue-400 font-semibold">Django</span>,
                 <span class="text-blue-400 font-semibold">HTML</span>,
                 <span class="text-blue-400 font-semibold">CSS</span>,
                 <span class="text-blue-400 font-semibold">JavaScript</span>, and
@@ -256,42 +255,7 @@
             </div>
           </div>
           <!-- Project 2 -->
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
-          >
-            <img
-              src="https://source.unsplash.com/random/800x600/?ecommerce"
-              alt="E-commerce Platform"
-              class="w-full"
-            />
-            <div class="p-6">
-              <h3 class="text-2xl font-bold mb-2 text-white">
-                E-commerce Platform
-              </h3>
-              <p class="text-gray-400 mb-4">
-                Developed a scalable e-commerce platform with user
-                authentication, product management, and payment gateway
-                integration, ensuring a seamless shopping experience.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >React.js</span
-                >
-                <span
-                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >Django</span
-                >
-                <span
-                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >Stripe API</span
-                >
-              </div>
-              <a href="#" class="text-blue-400 font-semibold hover:underline"
-                >View Project</a
-              >
-            </div>
-          </div>
+
           <!-- Project 3 -->
           <div
             class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
@@ -363,40 +327,7 @@
             </div>
           </div>
           <!-- Project 5 -->
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
-          >
-            <img
-              src="https://source.unsplash.com/random/800x600/?task"
-              alt="Task Manager"
-              class="w-full"
-            />
-            <div class="p-6">
-              <h3 class="text-2xl font-bold mb-2 text-white">Task Manager</h3>
-              <p class="text-gray-400 mb-4">
-                A task management app that allows users to create, edit, and
-                track tasks. Features include drag-and-drop task ordering and
-                real-time updates using Firebase.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >Vue.js</span
-                >
-                <span
-                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >Firebase</span
-                >
-                <span
-                  class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >CSS</span
-                >
-              </div>
-              <a href="#" class="text-blue-400 font-semibold hover:underline"
-                >View Project</a
-              >
-            </div>
-          </div>
+
           <!-- Project 6 -->
           <div
             class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
@@ -526,6 +457,45 @@
         }
       }
     </script>
+
+    <!-- Include EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("service_r22rsoc"); // Replace with your EmailJS user ID
+      })();
+
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Get the form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+
+          // Send the email using EmailJS
+          emailjs
+            .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+              from_name: name,
+              from_email: email,
+              message: message,
+            })
+            .then(
+              function (response) {
+                alert("Message sent successfully!");
+              },
+              function (error) {
+                alert("Failed to send message. Please try again.");
+              }
+            );
+        });
+    </script>
+
     <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
