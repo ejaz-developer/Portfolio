@@ -1,5 +1,7 @@
 const contactForm = document.getElementById("contact_form");
-emailjs.init("znEzWThcFUhb_ljBl");
+emailjs.init({
+  publicKey: "znEzWThcFUhb_ljBl",
+});
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault(); // Prevent the default form submission
 
