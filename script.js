@@ -1,5 +1,5 @@
 const contactForm = document.getElementById("contact_form");
-emailjs.init("mjUVFZeHSmJl98Slm")
+emailjs.init("mjUVFZeHSmJl98Slm");
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault(); // Prevent the default form submission
 
@@ -10,7 +10,7 @@ contactForm.addEventListener("submit", (e) => {
 
   // Send the email using EmailJS with dynamic data
   emailjs
-    .send("mjUVFZeHSmJl98Slm", "template_ufya4pm", {
+    .send("service_r22rsoc", "template_ufya4pm", {
       from_name: name, // Use the name from the form
       from_email: email, // Use the email from the form
       message: message, // Use the message from the form
